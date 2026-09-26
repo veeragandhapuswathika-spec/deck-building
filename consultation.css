@@ -1,0 +1,957 @@
+/* =========================================================
+   TIMBERNEST | BOOK A CONSULTATION
+   COMPLETE PAGE CSS
+========================================================= */
+
+
+/* =========================================================
+   ROOT COLORS
+========================================================= */
+
+:root {
+    --background: #FAF8F3;
+    --surface: #FFFFFF;
+    --surface-soft: #F4F1EA;
+
+    --text: #252A26;
+    --muted: #6B706B;
+
+    --border: #D8D3CA;
+
+    --primary: #2F5D3A;
+    --primary-dark: #21462C;
+
+    --gold: #B7793E;
+    --gold-dark: #945D2D;
+
+    --dark-background: #171B18;
+    --dark-surface: #202620;
+    --dark-card: #252C26;
+    --dark-border: #3A423B;
+    --dark-text: #F4F2EC;
+    --dark-muted: #B9BDB8;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.consultation-header {
+    height: 82px;
+
+    background: var(--background);
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    transition: 0.3s ease;
+}
+
+.consultation-header-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.consultation-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+}
+
+.consultation-logo img {
+    width: 54px;
+    height: 54px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.consultation-brand {
+    line-height: 1;
+}
+
+.consultation-brand strong {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* TIMBER = DARK GREEN
+   NEST = WOOD
+   SAME IN LIGHT + DARK MODE
+*/
+
+.consultation-brand .timber,
+body.dark-mode .consultation-brand .timber {
+    color: #2F5D3A !important;
+}
+
+.consultation-brand .nest,
+body.dark-mode .consultation-brand .nest {
+    color: #B7793E !important;
+}
+
+
+/* LOGO TAGLINE */
+
+.consultation-brand small {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #2F5D3A;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transition: color 0.3s ease;
+}
+
+
+/* DARK MODE LOGO TAGLINE = WHITE */
+
+body.dark-mode .consultation-brand small {
+    color: #FFFFFF;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   RTL + DARK MODE ONLY
+========================================================= */
+
+.consultation-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   RTL + DARK MODE BUTTONS
+   GOLD CIRCULAR BORDER
+========================================================= */
+
+.simple-icon-btn {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: transparent;
+
+    color: #B7793E;
+
+    border: 1px solid #B7793E;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.simple-icon-btn:hover {
+    background: #B7793E;
+
+    color: #FFFFFF;
+
+    border-color: #B7793E;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.consultation-hero {
+    min-height: 500px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 24px;
+
+    /* HERO IMAGE UNCHANGED */
+
+    background:
+        linear-gradient(
+            rgba(18, 35, 22, 0.72),
+            rgba(18, 35, 22, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=90")
+        center / cover no-repeat;
+}
+
+.consultation-hero-content {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO TAGLINE
+   THIN LINE BEFORE TEXT
+========================================================= */
+
+.consultation-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+
+    color: #B7793E;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* THIN LINE BEFORE TAGLINE */
+
+.consultation-label::before {
+    content: "";
+
+    width: 45px;
+    height: 1px;
+
+    background: #B7793E;
+
+    border-radius: 1px;
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.consultation-hero h1 {
+    margin: 0 0 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 6vw, 68px);
+
+    line-height: 1.08;
+
+    text-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+
+/* BOOK A = BLACK */
+
+.consultation-hero h1 .book-text {
+    color: #000000;
+}
+
+
+/* CONSULTATION = DARK GREEN */
+
+.consultation-hero h1 .consultation-text {
+    color: #2F5D3A;
+}
+
+
+/* =========================================================
+   HERO PARAGRAPH
+========================================================= */
+
+.consultation-hero p {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #FFFFFF;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   CONSULTATION SECTION
+========================================================= */
+
+.consultation-section {
+    padding: 90px 24px;
+
+    background: var(--background);
+}
+
+.consultation-container {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.consultation-info {
+    padding-top: 10px;
+}
+
+.section-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color: #B7793E;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.section-label::before {
+    content: "";
+
+    width: 45px;
+    height: 4px;
+
+    background: #B7793E;
+
+    border-radius: 2px;
+}
+
+.consultation-info h2 {
+    margin-bottom: 18px;
+
+    color: var(--text);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+
+    line-height: 1.15;
+}
+
+.consultation-info > p {
+    margin-bottom: 30px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.consultation-benefits {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.consultation-benefit {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+}
+
+.benefit-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #2F5D3A;
+
+    color: #FFFFFF;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+}
+
+.consultation-benefit h3 {
+    margin-bottom: 4px;
+
+    color: var(--text);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+}
+
+.consultation-benefit p {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM BOX
+========================================================= */
+
+.consultation-form-box {
+    padding: 38px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+.consultation-form-box h2 {
+    margin-bottom: 8px;
+
+    color: var(--text);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 30px;
+}
+
+.consultation-form-box > p {
+    margin-bottom: 25px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.consultation-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+
+    border-radius: 6px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #B7793E;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.consultation-submit {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    margin-top: 4px;
+
+    background: #B7793E;
+
+    color: #FFFFFF;
+
+    border: 1px solid #B7793E;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.consultation-submit:hover {
+    background: #945D2D;
+
+    border-color: #945D2D;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode {
+    background: var(--dark-background);
+
+    color: var(--dark-text);
+}
+
+body.dark-mode .consultation-header {
+    background: var(--dark-background);
+
+    border-color: var(--dark-border);
+}
+
+
+/* =========================================================
+   LOGO COLORS STAY THE SAME
+========================================================= */
+
+body.dark-mode .consultation-brand .timber {
+    color: #2F5D3A !important;
+}
+
+body.dark-mode .consultation-brand .nest {
+    color: #B7793E !important;
+}
+
+
+/* DARK MODE LOGO TAGLINE */
+
+body.dark-mode .consultation-brand small {
+    color: #FFFFFF;
+}
+
+
+/* =========================================================
+   DARK MODE ICON BUTTONS
+========================================================= */
+
+body.dark-mode .simple-icon-btn {
+    background: transparent;
+
+    color: #B7793E;
+
+    border-color: #B7793E;
+}
+
+body.dark-mode .simple-icon-btn:hover {
+    background: #B7793E;
+
+    color: #FFFFFF;
+
+    border-color: #B7793E;
+}
+
+
+/* =========================================================
+   DARK MODE HERO TEXT
+========================================================= */
+
+/* BOOK A → WHITE */
+
+body.dark-mode .consultation-hero h1 .book-text {
+    color: #FFFFFF;
+}
+
+
+/* CONSULTATION → LIGHT GREEN */
+
+body.dark-mode .consultation-hero h1 .consultation-text {
+    color: #8FB59A;
+}
+
+
+/* HERO PARAGRAPH */
+
+body.dark-mode .consultation-hero p {
+    color: #FFFFFF;
+}
+
+
+/* =========================================================
+   DARK MODE SECTION
+========================================================= */
+
+body.dark-mode .consultation-section {
+    background: var(--dark-background);
+}
+
+
+/* =========================================================
+   DARK MODE TEXT
+========================================================= */
+
+body.dark-mode .consultation-info h2,
+body.dark-mode .consultation-benefit h3,
+body.dark-mode .consultation-form-box h2,
+body.dark-mode .form-group label {
+    color: var(--dark-text);
+}
+
+body.dark-mode .consultation-info > p,
+body.dark-mode .consultation-benefit p,
+body.dark-mode .consultation-form-box > p {
+    color: var(--dark-muted);
+}
+
+
+/* =========================================================
+   DARK MODE FORM CARD
+========================================================= */
+
+body.dark-mode .consultation-form-box {
+    background: var(--dark-card);
+
+    border-color: var(--dark-border);
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   DARK MODE FORM INPUTS
+========================================================= */
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea {
+    background: var(--dark-surface);
+
+    color: var(--dark-text);
+
+    border-color: var(--dark-border);
+}
+
+body.dark-mode .form-group input::placeholder,
+body.dark-mode .form-group textarea::placeholder {
+    color: var(--dark-muted);
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .consultation-header-inner {
+    direction: rtl;
+}
+
+html[dir="rtl"] .consultation-logo {
+    direction: rtl;
+}
+
+html[dir="rtl"] .consultation-actions {
+    direction: rtl;
+
+    justify-content: flex-end;
+}
+
+html[dir="rtl"] .consultation-container {
+    direction: rtl;
+}
+
+html[dir="rtl"] .consultation-label,
+html[dir="rtl"] .section-label {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .consultation-benefit {
+    flex-direction: row-reverse;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .consultation-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .consultation-header {
+        height: auto;
+    }
+
+    .consultation-header-inner {
+        min-height: 82px;
+
+        padding: 12px 18px;
+
+        display: flex;
+
+        flex-wrap: nowrap;
+
+        gap: 15px;
+    }
+
+    .consultation-logo {
+        width: auto;
+
+        flex: 1;
+    }
+
+    .consultation-actions {
+        width: auto;
+
+        flex-shrink: 0;
+
+        justify-content: flex-end;
+    }
+
+    .consultation-hero {
+        min-height: 460px;
+
+        padding: 80px 20px;
+    }
+
+    .consultation-hero h1 {
+        font-size: 42px;
+    }
+
+    .consultation-hero p {
+        font-size: 16px;
+    }
+
+    .consultation-section {
+        padding: 70px 18px;
+    }
+
+    .consultation-info h2 {
+        font-size: 34px;
+    }
+
+    .consultation-form-box {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .consultation-header-inner {
+        padding: 12px 14px;
+
+        gap: 10px;
+    }
+
+    .consultation-logo {
+        gap: 8px;
+    }
+
+    .consultation-logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .consultation-brand strong {
+        font-size: 21px;
+    }
+
+    .consultation-brand small {
+        font-size: 7px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .consultation-actions {
+        gap: 7px;
+    }
+
+    .simple-icon-btn {
+        width: 38px;
+        height: 38px;
+
+        font-size: 17px;
+    }
+
+    .consultation-hero h1 {
+        font-size: 36px;
+    }
+
+    .consultation-form-box {
+        padding: 22px 16px;
+    }
+
+}
